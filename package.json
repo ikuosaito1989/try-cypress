@@ -1,5 +1,9 @@
 {
     "scripts": {
-        "cypress:open": "cypress open"
+        "cypress:open": "cypress open",
+        "prettier": "prettier --write cypress/**/*.js"
+    },
+    "dependencies": {
+        "prettier": "^1.19.1"
     }
 }
