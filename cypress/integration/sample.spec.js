@@ -3,14 +3,6 @@ describe('My First Test', function() {
   it('Does not do much!', function() {
     expect(true).to.equal(true)
   })
-  it('Visits the My Profile', function() {
-    cy.visit('https://festive-yonath-a04e1e.netlify.com/')
-    cy.contains('みんなの洋楽ランキング')
-  })
-  it('clicks the link "みんなの洋楽ランキング"', function() {
-    cy.visit('https://festive-yonath-a04e1e.netlify.com/')
-    cy.contains('みんなの洋楽ランキング').click()
-  })
   it('finds the content "type"', function() {
     cy.visit('https://example.cypress.io')
     cy.contains('type')
