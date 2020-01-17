@@ -6,8 +6,17 @@ describe('My First Test', function() {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
     cy.contains('みんなの洋楽ランキング')
   })
+  it('clicks the link "みんなの洋楽ランキング"', function() {
+    cy.visit('https://festive-yonath-a04e1e.netlify.com/')
+    cy.contains('みんなの洋楽ランキング').click()
+  })
   it('finds the content "type"', function() {
     cy.visit('https://example.cypress.io')
     cy.contains('type')
+  })
+  it('clicks the link "type"', function() {
+    cy.visit('https://example.cypress.io')
+
+    cy.contains('type').click()
   })
 })
