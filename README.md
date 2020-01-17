@@ -19,3 +19,7 @@ https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Defaul
 とりあえず困ったらここ
 
 https://docs.cypress.io/api/api/table-of-contents.html
+
+## cypress.json
+
+https://docs.cypress.io/guides/references/configuration.html#Options
