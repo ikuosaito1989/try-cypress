@@ -1,17 +1,17 @@
 /// <reference types="Cypress" />
-describe('My First Test', function() {
-  it('Visits the My Profile', function() {
+describe('プロフィールページ', function() {
+  it('ラベルが表示されること', function() {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
     cy.contains('みんなの洋楽ランキング')
   })
-  it('clicks the link "みんなの洋楽ランキング"', function() {
+
+  it('ラベルにクリック出来ること', function() {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
     cy.contains('みんなの洋楽ランキング').click()
   })
-  it('clicking "みんなの洋楽ランキング" navigates to a new url', function() {
+
+  it('ポートフォリオにクリックし、詳細画面へ遷移出来ること', function() {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
-    
-    // 先頭の要素がクリックされ、/portfolio/1する
     cy.get('.portfolio-item-caption').first().click()
     cy.url().should('include', '/portfolio/1')
 
