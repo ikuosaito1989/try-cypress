@@ -1,18 +1,20 @@
 /// <reference types="Cypress" />
 describe('プロフィールページ', () => {
-  it('ラベルが表示されること', () =>  {
+  it('ラベルが表示されること', () => {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
     cy.contains('みんなの洋楽ランキング')
   })
 
-  it('ラベルにクリック出来ること', () =>  {
+  it('ラベルにクリック出来ること', () => {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
     cy.contains('みんなの洋楽ランキング').click()
   })
 
-  it('ポートフォリオにクリックし、詳細画面へ遷移出来ること', () =>  {
+  it('ポートフォリオにクリックし、詳細画面へ遷移出来ること', () => {
     cy.visit('https://festive-yonath-a04e1e.netlify.com/')
-    cy.get('.portfolio-item-caption').first().click()
+    cy.get('.portfolio-item-caption')
+      .first()
+      .click()
     cy.url().should('include', '/portfolio/1')
 
     // 全ての要素をクリック。最後のアサーションのみ評価される（つまり/portfolio/1）は評価されない
