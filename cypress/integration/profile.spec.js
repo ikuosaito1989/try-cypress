@@ -19,4 +19,14 @@ describe('プロフィールページ', () => {
     // cy.get('.portfolio-item-caption').click({ multiple: true })
     // cy.url().should('include', '/portfolio/4')
   })
+
+  describe('問合せ', () => {
+    it('名前が正しく入力出来ること', () => {
+      cy.visit('https://festive-yonath-a04e1e.netlify.com/')
+      cy.get('.form-control')
+        .first()
+        .type('山田　太郎')
+        .should('have.value', '山田　太郎')
+    })
+  })
 })
